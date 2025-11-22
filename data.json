@@ -1,0 +1,967 @@
+[
+  {
+    "nome": "Vercel",
+    "descricao": "Plataforma de desenvolvimento e implantação focada em performance e experiência do desenvolvedor. Ideal para projetos Next.js e sites estáticos.",
+    "data_criacao": "2015",
+    "link": "https://vercel.com",
+    "tags": [
+      "deployment",
+      "serverless",
+      "frontend",
+      "jamstack",
+      "cdn"
+    ]
+  },
+  {
+    "nome": "Netlify",
+    "descricao": "Plataforma líder em Jamstack, oferecendo hospedagem estática, funções serverless e integração contínua para projetos web modernos.",
+    "data_criacao": "2014",
+    "link": "https://www.netlify.com",
+    "tags": [
+      "jamstack",
+      "hosting",
+      "serverless",
+      "deployment",
+      "ci/cd"
+    ]
+  },
+  {
+    "nome": "GitHub Pages",
+    "descricao": "Serviço de hospedagem de sites estáticos gratuito, diretamente de repositórios do GitHub. Comumente usado para documentação e blogs.",
+    "data_criacao": "2008",
+    "link": "https://pages.github.com",
+    "tags": [
+      "hosting",
+      "estático",
+      "open source",
+      "documentação"
+    ]
+  },
+  {
+    "nome": "Cloudflare Pages",
+    "descricao": "Plataforma de hospedagem front-end e Jamstack que implanta código globalmente na rede edge da Cloudflare, com alta velocidade.",
+    "data_criacao": "2020",
+    "link": "https://pages.cloudflare.com",
+    "tags": [
+      "jamstack",
+      "cdn",
+      "edge computing",
+      "frontend",
+      "serverless"
+    ]
+  },
+  {
+    "nome": "GitLab Pages",
+    "descricao": "Recurso do GitLab que permite publicar sites estáticos diretamente de um repositório, incluindo suporte a geradores estáticos.",
+    "data_criacao": "2016",
+    "link": "https://docs.gitlab.com/ee/user/project/pages/",
+    "tags": [
+      "hosting",
+      "estático",
+      "ci/cd",
+      "git",
+      "infraestrutura"
+    ]
+  },
+  {
+    "nome": "Deno Deploy",
+    "descricao": "Plataforma de execução de código JavaScript, TypeScript e WebAssembly globalmente, focada em alta performance e segurança do ecossistema Deno.",
+    "data_criacao": "2021",
+    "link": "https://deno.com/deploy",
+    "tags": [
+      "serverless",
+      "edge computing",
+      "javascript",
+      "typescript",
+      "deployment"
+    ]
+  },
+  {
+    "nome": "DigitalOcean App Platform",
+    "descricao": "Serviço PaaS da DigitalOcean para implantação rápida de código-fonte e contêineres, com um generoso tier gratuito para aplicativos pequenos.",
+    "data_criacao": "2020",
+    "link": "https://www.digitalocean.com/products/app-platform",
+    "tags": [
+      "paas",
+      "containers",
+      "cloud computing",
+      "deployment"
+    ]
+  },
+  {
+    "nome": "Google Cloud Run",
+    "descricao": "Plataforma serverless que permite rodar contêineres (Docker) de forma escalável e totalmente gerenciada, pagando apenas pelo uso.",
+    "data_criacao": "2019",
+    "link": "https://cloud.google.com/run",
+    "tags": [
+      "serverless",
+      "containers",
+      "paas",
+      "gcp",
+      "microsserviços"
+    ]
+  },
+  {
+    "nome": "AWS Amplify Hosting",
+    "descricao": "Serviço de hospedagem e deployment contínuo para aplicativos web estáticos ou renderizados no lado do servidor (SSR) na AWS.",
+    "data_criacao": "2018",
+    "link": "https://aws.amazon.com/amplify",
+    "tags": [
+      "aws",
+      "hosting",
+      "fullstack",
+      "serverless",
+      "ci/cd"
+    ]
+  },
+  {
+    "nome": "Microsoft Azure Static Web Apps",
+    "descricao": "Serviço simplificado para construir e implantar aplicativos web full-stack usando frameworks front-end estáticos e APIs serverless (Azure Functions).",
+    "data_criacao": "2020",
+    "link": "https://azure.microsoft.com/pt-br/products/static-web-apps",
+    "tags": [
+      "azure",
+      "estático",
+      "serverless",
+      "frontend",
+      "jamstack"
+    ]
+  },
+  {
+    "nome": "Koyeb",
+    "descricao": "Plataforma serverless de computação global para executar aplicativos e APIs. Permite rodar contêineres Docker e serviços de banco de dados.",
+    "data_criacao": "2020",
+    "link": "https://www.koyeb.com",
+    "tags": [
+      "paas",
+      "serverless",
+      "containers",
+      "deployment",
+      "global"
+    ]
+  },
+  {
+    "nome": "Replit",
+    "descricao": "Ambiente de desenvolvimento integrado (IDE) na nuvem que permite codificar, compilar e hospedar aplicativos em mais de 50 linguagens instantaneamente.",
+    "data_criacao": "2016",
+    "link": "https://replit.com",
+    "tags": [
+      "ide",
+      "hosting",
+      "educação",
+      "desenvolvimento",
+      "python"
+    ]
+  },
+  {
+    "nome": "Glitch",
+    "descricao": "Ferramenta colaborativa e criativa para construir e remixar aplicativos web. Famosa por hospedar pequenos bots e utilitários Node.js.",
+    "data_criacao": "2017",
+    "link": "https://glitch.com",
+    "tags": [
+      "colaboração",
+      "hosting",
+      "node.js",
+      "prototipagem"
+    ]
+  },
+  {
+    "nome": "Surge.sh",
+    "descricao": "Ferramenta de linha de comando extremamente simples e rápida para implantação de projetos front-end, principalmente sites estáticos.",
+    "data_criacao": "2014",
+    "link": "https://surge.sh",
+    "tags": [
+      "cli",
+      "hosting",
+      "frontend",
+      "estático"
+    ]
+  },
+  {
+    "nome": "Supabase",
+    "descricao": "Backend de código aberto para desenvolvedores, fornecendo banco de dados PostgreSQL, autenticação e funções serverless como alternativa ao Firebase.",
+    "data_criacao": "2020",
+    "link": "https://supabase.com",
+    "tags": [
+      "backend",
+      "open source",
+      "banco de dados",
+      "serverless",
+      "postgres"
+    ]
+  },
+  {
+    "nome": "Appwrite",
+    "descricao": "Plataforma Backend as a Service (BaaS) auto-hospedada ou gerenciada que acelera o desenvolvimento de aplicativos com APIs e serviços prontos.",
+    "data_criacao": "2019",
+    "link": "https://appwrite.io",
+    "tags": [
+      "backend",
+      "baas",
+      "open source",
+      "docker",
+      "api"
+    ]
+  },
+  {
+    "nome": "Dokku",
+    "descricao": "PaaS minimalista auto-hospedada (self-hosted) que permite implantação estilo Heroku usando Docker. Ideal para servidores pequenos.",
+    "data_criacao": "2013",
+    "link": "http://dokku.com",
+    "tags": [
+      "paas",
+      "auto-hospedado",
+      "docker",
+      "linux"
+    ]
+  },
+  {
+    "nome": "Caprover",
+    "descricao": "Solução PaaS de código aberto e auto-hospedada que facilita a implantação de aplicativos em qualquer servidor usando Docker Swarm.",
+    "data_criacao": "2017",
+    "link": "https://caprover.com",
+    "tags": [
+      "paas",
+      "open source",
+      "auto-hospedado",
+      "docker",
+      "devops"
+    ]
+  },
+  {
+    "nome": "Coolify",
+    "descricao": "Alternativa de código aberto e auto-hospedada ao Heroku/Netlify que gerencia servidores, implanta aplicativos, bancos de dados e serviços com facilidade.",
+    "data_criacao": "2021",
+    "link": "https://coolify.io",
+    "tags": [
+      "paas",
+      "open source",
+      "auto-hospedado",
+      "docker",
+      "devops"
+    ]
+  },
+  {
+    "nome": "Northflank",
+    "descricao": "Plataforma unificada para construir e implantar serviços, bancos de dados e trabalhos em lote, suportando tanto contêineres quanto serverless.",
+    "data_criacao": "2020",
+    "link": "https://northflank.com",
+    "tags": [
+      "paas",
+      "containers",
+      "serverless",
+      "cloud"
+    ]
+  },
+  {
+    "nome": "Qoddi",
+    "descricao": "Plataforma PaaS que oferece hospedagem gratuita para desenvolvedores com foco em ambientes de produção, suportando diversas linguagens (Node, Python, Go).",
+    "data_criacao": "2018",
+    "link": "https://qoddi.com",
+    "tags": [
+      "paas",
+      "hosting",
+      "desenvolvimento",
+      "node.js"
+    ]
+  },
+  {
+    "nome": "Piku",
+    "descricao": "PaaS auto-hospedada (PaaS miniatura) que permite implantação via SSH e Git push. Ideal para rodar pequenos projetos em servidores ARM (Raspberry Pi).",
+    "data_criacao": "2015",
+    "link": "https://piku.github.io",
+    "tags": [
+      "paas",
+      "auto-hospedado",
+      "ssh",
+      "open source"
+    ]
+  },
+  {
+    "nome": "Oracle Cloud Infrastructure (OCI) Free Tier",
+    "descricao": "Oferece um conjunto robusto de recursos 'Sempre Grátis' (Always Free), incluindo VMs e bancos de dados, permitindo hospedagem permanente de pequenas aplicações.",
+    "data_criacao": "2018",
+    "link": "https://www.oracle.com/cloud/free",
+    "tags": [
+      "cloud computing",
+      "infraestrutura",
+      "iaas",
+      "banco de dados"
+    ]
+  },
+  {
+    "nome": "Scalingo",
+    "descricao": "PaaS europeia focada em conformidade (GDPR) e suporte a diversas linguagens, oferecendo um modelo de implantação baseado em Git.",
+    "data_criacao": "2011",
+    "link": "https://scalingo.com",
+    "tags": [
+      "paas",
+      "cloud",
+      "deployment",
+      "europeu"
+    ]
+  },
+  {
+    "nome": "Gatsby Cloud",
+    "descricao": "Plataforma de hospedagem e implantação otimizada especificamente para sites e aplicativos construídos com o framework Gatsby, focada em performance.",
+    "data_criacao": "2019",
+    "link": "https://www.gatsbyjs.com/cloud",
+    "tags": [
+      "jamstack",
+      "frontend",
+      "react",
+      "hosting",
+      "cdn"
+    ]
+  },
+  {
+    "nome": "Cyclic.sh",
+    "descricao": "Plataforma de hospedagem serverless para aplicações Node.js e React. Oferece um tier gratuito focado em desenvolvimento e projetos open source, ideal para backends e APIs. Suporta deployment contínuo via GitHub.",
+    "data_criacao": "2021",
+    "link": "https://www.cyclic.sh",
+    "tags": [
+      "PaaS",
+      "Serverless",
+      "Node.js",
+      "React",
+      "Deployment"
+    ]
+  },
+  {
+    "nome": "Section.io",
+    "descricao": "Plataforma de Edge Computing que permite deploy de microsserviços e aplicações em uma rede global. Utiliza tecnologias de container baseadas em Docker e Kubernetes, sendo eficiente para aplicações construídas em Go.",
+    "data_criacao": "2012",
+    "link": "https://www.section.io",
+    "tags": [
+      "Edge Computing",
+      "Kubernetes",
+      "Docker",
+      "Go",
+      "CDN"
+    ]
+  },
+  {
+    "nome": "Elestio",
+    "descricao": "Plataforma de nuvem que simplifica a implantação e o gerenciamento de mais de 100 serviços de código aberto. Oferece planos gratuitos para desenvolvedores e suporta stacks populares como Django e Node.js.",
+    "data_criacao": "2021",
+    "link": "https://elest.io",
+    "tags": [
+      "PaaS",
+      "Open Source Hosting",
+      "Django",
+      "Node.js",
+      "Infraestrutura"
+    ]
+  },
+  {
+    "nome": "PythonAnywhere",
+    "descricao": "Ambiente de desenvolvimento e hospedagem baseado em nuvem, totalmente otimizado para a linguagem Python. Permite o deploy rápido de aplicações web construídas com Flask e Django.",
+    "data_criacao": "2012",
+    "link": "https://www.pythonanywhere.com",
+    "tags": [
+      "Python",
+      "Flask",
+      "Django",
+      "Hospedagem",
+      "PaaS"
+    ]
+  },
+  {
+    "nome": "IBM Cloud Code Engine (Lite)",
+    "descricao": "Plataforma serverless totalmente gerenciada da IBM Cloud. Permite o deploy de código, containers Docker e cargas de trabalho Kubernetes, suportando linguagens como Java e Spring Boot no seu tier gratuito.",
+    "data_criacao": "2021",
+    "link": "https://www.ibm.com/cloud/code-engine",
+    "tags": [
+      "Serverless",
+      "Kubernetes",
+      "Java",
+      "Spring Boot",
+      "Cloud"
+    ]
+  },
+  {
+    "nome": "FreeHostia",
+    "descricao": "Serviço de hospedagem web tradicional que oferece um 'Chocolate Plan' gratuito, incluindo PHP, MySQL e suporte a scripts. Ideal para pequenos projetos baseados em PHP e Laravel.",
+    "data_criacao": "2005",
+    "link": "https://www.freehostia.com",
+    "tags": [
+      "Hospedagem Compartilhada",
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Web Hosting"
+    ]
+  },
+  {
+    "nome": "4everland",
+    "descricao": "Plataforma de hospedagem web 3.0 descentralizada, focada em aplicações JAMstack. Oferece serviços gratuitos para static sites, suportando frameworks frontend como Vue.js e React.",
+    "data_criacao": "2021",
+    "link": "https://www.4everland.org",
+    "tags": [
+      "Web3",
+      "Decentralizada",
+      "Vue.js",
+      "Static Site",
+      "IPFS"
+    ]
+  },
+  {
+    "nome": "Hetzner Cloud (Trial)",
+    "descricao": "Provedor de IaaS que oferece créditos promocionais para testar seus recursos de VPS e infraestrutura. Amplamente utilizado para hospedar instâncias Docker e ambientes Kubernetes auto-gerenciados.",
+    "data_criacao": "1997",
+    "link": "https://www.hetzner.com/cloud",
+    "tags": [
+      "IaaS",
+      "VPS",
+      "Docker",
+      "Kubernetes",
+      "Infraestrutura"
+    ]
+  },
+  {
+    "nome": "Platform.sh (OSS Free)",
+    "descricao": "Plataforma PaaS que oferece um plano gratuito para projetos de código aberto. Possui forte integração Git e suporta diversas linguagens, incluindo PHP (Laravel) e Python.",
+    "data_criacao": "2010",
+    "link": "https://platform.sh",
+    "tags": [
+      "PaaS",
+      "GitOps",
+      "PHP",
+      "Laravel",
+      "Deployment"
+    ]
+  },
+  {
+    "nome": "Google App Engine (Standard Free Tier)",
+    "descricao": "PaaS do Google Cloud que permite construir backends escaláveis usando um modelo serverless. Oferece uma cota gratuita generosa e tem suporte nativo para Python, Java, Node.js e Go.",
+    "data_criacao": "2008",
+    "link": "https://cloud.google.com/appengine",
+    "tags": [
+      "PaaS",
+      "Serverless",
+      "Go",
+      "Python",
+      "Java"
+    ]
+  },
+  {
+    "nome": "Jelastic (Free Environment)",
+    "descricao": "Plataforma multi-cloud PaaS que oferece ambientes de desenvolvimento gratuitos e trials. Ideal para testar aplicações complexas baseadas em Java, Spring Boot e PHP com recursos de escalabilidade.",
+    "data_criacao": "2010",
+    "link": "https://jelastic.com",
+    "tags": [
+      "PaaS",
+      "Java",
+      "Spring Boot",
+      "Multi-Cloud",
+      "Container"
+    ]
+  },
+  {
+    "nome": "OpenShift Online (Developer Sandbox)",
+    "descricao": "Versão PaaS de containers baseada em Kubernetes da Red Hat. Oferece um Sandbox gratuito para desenvolvedores, permitindo o deploy de aplicações em Ruby on Rails, Node.js e Python.",
+    "data_criacao": "2011",
+    "link": "https://developers.redhat.com/products/openshift/developer-sandbox",
+    "tags": [
+      "Kubernetes",
+      "PaaS",
+      "Ruby on Rails",
+      "Docker",
+      "Red Hat"
+    ]
+  },
+  {
+    "nome": "Kamatera Express (Trial Gratuito)",
+    "descricao": "Provedor de serviços em nuvem que oferece um trial de 30 dias para testar suas VMs. É uma boa opção para deploy de aplicações que exigem C# e .NET CORE em servidores Windows ou Linux.",
+    "data_criacao": "1995",
+    "link": "https://www.kamatera.com",
+    "tags": [
+      "IaaS",
+      "VPS",
+      "C#",
+      ".NET CORE",
+      "Trial"
+    ]
+  },
+  {
+    "nome": "CodeSandbox",
+    "descricao": "Ambiente de desenvolvimento online focado em frontend. Excelente para prototipagem e deploy instantâneo de projetos baseados em React, Vue.js e Node.js.",
+    "data_criacao": "2017",
+    "link": "https://codesandbox.io",
+    "tags": [
+      "IDE Online",
+      "Frontend",
+      "React",
+      "Node.js",
+      "Vue.js"
+    ]
+  },
+  {
+    "nome": "StackBlitz",
+    "descricao": "IDE online que utiliza WebContainers para rodar Node.js e ambientes de desenvolvimento em Angular e React diretamente no navegador, eliminando a necessidade de configuração local para protótipos.",
+    "data_criacao": "2017",
+    "link": "https://stackblitz.com",
+    "tags": [
+      "IDE Online",
+      "Angular",
+      "WebContainers",
+      "Node.js",
+      "Frontend"
+    ]
+  },
+  {
+    "nome": "Azure Functions (Free Grant)",
+    "descricao": "Serviço de Functions as a Service (FaaS) da Microsoft Azure. Permite a execução de código serverless em uma camada gratuita, suportando C# e .NET CORE de forma nativa.",
+    "data_criacao": "2016",
+    "link": "https://azure.microsoft.com/en-us/products/functions",
+    "tags": [
+      "Serverless",
+      "FaaS",
+      "C#",
+      ".NET CORE",
+      "Azure"
+    ]
+  },
+  {
+    "nome": "Sourcehut Pages",
+    "descricao": "Plataforma minimalista e focada em CLI para hospedagem de páginas estáticas e sites simples. Suporta o workflow Git e é popular entre desenvolvedores que preferem soluções baseadas em Unix/Linux.",
+    "data_criacao": "2019",
+    "link": "https://sourcehut.org/pages",
+    "tags": [
+      "Static Site",
+      "Git",
+      "Linux",
+      "Hospedagem",
+      "Minimalista"
+    ]
+  },
+  {
+    "nome": "Uberspace",
+    "descricao": "Hospedagem compartilhada generosa e focada em linha de comando. Permite rodar diversas aplicações em diferentes linguagens como Ruby on Rails, Python e PHP em um ambiente flexível.",
+    "data_criacao": "2007",
+    "link": "https://uberspace.de",
+    "tags": [
+      "Hospedagem",
+      "Ruby on Rails",
+      "Python",
+      "PHP",
+      "Terminal"
+    ]
+  },
+  {
+    "nome": "Hasura Cloud (Free Tier)",
+    "descricao": "Plataforma de Backend-as-a-Service que fornece uma API GraphQL instantânea sobre bases de dados. Ideal para acelerar o desenvolvimento de aplicações Node.js e React.",
+    "data_criacao": "2018",
+    "link": "https://hasura.io/cloud",
+    "tags": [
+      "BaaS",
+      "GraphQL",
+      "Node.js",
+      "React",
+      "Postgres"
+    ]
+  },
+  {
+    "nome": "Strapi (Self-Hosted)",
+    "descricao": "Headless CMS open source construído em Node.js. Embora seja self-hosted, é gratuito para deploy em qualquer VPS ou container Docker, sendo frequentemente pareado com frontends como Vue.js.",
+    "data_criacao": "2015",
+    "link": "https://strapi.io",
+    "tags": [
+      "CMS",
+      "Node.js",
+      "Headless",
+      "Docker",
+      "Vue.js"
+    ]
+  },
+  {
+    "nome": "Ghost CMS (Self-Hosted)",
+    "descricao": "Plataforma de publicação gratuita e open source, desenvolvida em Node.js. Requer um servidor VPS ou IaaS (como AWS EC2 Free Tier) para deploy.",
+    "data_criacao": "2013",
+    "link": "https://ghost.org",
+    "tags": [
+      "CMS",
+      "Node.js",
+      "Blogging",
+      "Open Source",
+      "Deployment"
+    ]
+  },
+  {
+    "nome": "WasmCloud",
+    "descricao": "Plataforma de computação distribuída focada em WebAssembly (Wasm). Permite a execução de microsserviços seguros e portáveis, sendo amplamente utilizado para aplicações desenvolvidas em Rust e Go.",
+    "data_criacao": "2020",
+    "link": "https://wasmcloud.com",
+    "tags": [
+      "WebAssembly",
+      "Rust",
+      "Go",
+      "Serverless",
+      "Microsserviços"
+    ]
+  },
+  {
+    "nome": "OpenFaaS",
+    "descricao": "Framework Serverless para containers (Functions as a Service). Permite o deploy de funções usando Docker e Kubernetes em qualquer infraestrutura, suportando Go, Python e Node.js.",
+    "data_criacao": "2017",
+    "link": "https://www.openfaas.com",
+    "tags": [
+      "FaaS",
+      "Serverless",
+      "Docker",
+      "Kubernetes",
+      "Go"
+    ]
+  },
+  {
+    "nome": "HashiCorp Nomad",
+    "descricao": "Orquestrador de containers e tarefas leve e flexível, escrito em Go. É uma alternativa simples ao Kubernetes para gerenciar deployments de aplicações Docker e máquinas virtuais.",
+    "data_criacao": "2015",
+    "link": "https://www.hashicorp.com/products/nomad",
+    "tags": [
+      "Orquestração",
+      "Go",
+      "Docker",
+      "Deployment",
+      "Scheduler"
+    ]
+  },
+  {
+    "nome": "Jenkins (Self-Hosted Free)",
+    "descricao": "Servidor de automação open source e gratuito, amplamente usado para CI/CD. Embora não seja uma plataforma de hospedagem, é o motor de deployment para muitas aplicações Java, Spring Boot e Docker.",
+    "data_criacao": "2011",
+    "link": "https://www.jenkins.io",
+    "tags": [
+      "CI/CD",
+      "Java",
+      "Automation",
+      "Docker",
+      "Deployment Tool"
+    ]
+  },
+  {
+    "nome": "Buddy Works (Free Plan)",
+    "descricao": "Ferramenta de CI/CD que simplifica pipelines de deployment com foco em entrega contínua. Possui integração nativa com frameworks PHP como Laravel e permite o deploy para vários provedores.",
+    "data_criacao": "2007",
+    "link": "https://buddy.works",
+    "tags": [
+      "CI/CD",
+      "Laravel",
+      "PHP",
+      "Automation",
+      "Deployment"
+    ]
+  },
+  {
+    "nome": "AWS EC2 T2 Micro (Free Tier)",
+    "descricao": "Instância de máquina virtual gratuita (por 12 meses) na Amazon Web Services. Essencial para self-hosting de microsserviços Docker, aplicações Java ou ambientes Python.",
+    "data_criacao": "2006",
+    "link": "https://aws.amazon.com/ec2",
+    "tags": [
+      "IaaS",
+      "Cloud",
+      "Docker",
+      "Linux",
+      "Infrastructure"
+    ]
+  },
+  {
+    "nome": "Azure Virtual Machines (Free Tier)",
+    "descricao": "Máquinas virtuais gratuitas da Microsoft Azure, ideais para hospedar aplicações C# e .NET CORE em Windows Server, ou qualquer stack Linux como Python e Java.",
+    "data_criacao": "2010",
+    "link": "https://azure.microsoft.com/en-us/products/virtual-machines",
+    "tags": [
+      "IaaS",
+      "C#",
+      ".NET CORE",
+      "Azure",
+      "Virtual Machine"
+    ]
+  },
+  {
+    "nome": "Knative",
+    "descricao": "Plataforma open source que estende o Kubernetes para fornecer componentes serverless. Ideal para construir, implantar e gerenciar workloads modernos de Go, Node.js e Python.",
+    "data_criacao": "2018",
+    "link": "https://knative.dev",
+    "tags": [
+      "Kubernetes",
+      "Serverless",
+      "Go",
+      "Node.js",
+      "Cloud Native"
+    ]
+  },
+  {
+    "nome": "Cloud Foundry (Open Source)",
+    "descricao": "PaaS open source madura, frequentemente utilizada em ambientes empresariais. Suporta uma ampla gama de linguagens através de buildpacks, incluindo Java (Spring Boot), Ruby e Python.",
+    "data_criacao": "2011",
+    "link": "https://www.cloudfoundry.org",
+    "tags": [
+      "PaaS",
+      "Open Source",
+      "Java",
+      "Spring Boot",
+      "Ruby"
+    ]
+  },
+  {
+    "nome": "Minikube",
+    "descricao": "Ferramenta que permite rodar um cluster Kubernetes localmente em sua máquina. Essencial para testar e preparar manifestos Docker e K8s antes do deploy em produção.",
+    "data_criacao": "2016",
+    "link": "https://minikube.sigs.k8s.io",
+    "tags": [
+      "Kubernetes",
+      "Local Development",
+      "Docker",
+      "Testing",
+      "DevOps"
+    ]
+  },
+  {
+    "nome": "Multipass",
+    "descricao": "Ferramenta da Canonical para lançar e gerenciar VMs Ubuntu. Simula um ambiente de nuvem (IaaS) localmente, sendo ótimo para testar deploys de aplicações em Ruby on Rails e Python.",
+    "data_criacao": "2018",
+    "link": "https://multipass.run",
+    "tags": [
+      "VM",
+      "Linux",
+      "IaaS",
+      "Ruby on Rails",
+      "Local Development"
+    ]
+  },
+  {
+    "nome": "Sphere Engine",
+    "descricao": "Plataforma de execução de código que fornece APIs para compilar e rodar código em várias linguagens, incluindo Java, C# e Python. Usado para fins educacionais e de teste.",
+    "data_criacao": "2009",
+    "link": "https://sphere-engine.com",
+    "tags": [
+      "Code Execution",
+      "API",
+      "C#",
+      "Java",
+      "Python"
+    ]
+  },
+  {
+    "nome": "Hostinger (Shared Hosting Trial)",
+    "descricao": "Provedor de hospedagem que frequentemente oferece trials ou planos extremamente baratos. É uma solução comum para deploy de sites com PHP, Laravel ou WordPress.",
+    "data_criacao": "2004",
+    "link": "https://www.hostinger.com.br",
+    "tags": [
+      "Hospedagem Compartilhada",
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Web Hosting"
+    ]
+  },
+  {
+    "nome": "Plausible Analytics (Self-Hosted)",
+    "descricao": "Ferramenta de análise web leve e open source, escrita em Go. O código é gratuito e pode ser implantado usando Docker em qualquer VPS, ideal para quem aprende Go e Docker.",
+    "data_criacao": "2018",
+    "link": "https://plausible.io",
+    "tags": [
+      "Go",
+      "Open Source",
+      "Docker",
+      "Analytics",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "nome": "Oracle APEX Service (Always Free)",
+    "descricao": "Serviço Always Free da Oracle focado em desenvolvimento de aplicações de banco de dados. Permite a construção de aplicações web ricas em dados usando PL/SQL e Javascript, sem custos.",
+    "data_criacao": "1999",
+    "link": "https://www.oracle.com/database/technologies/appdev/apex.html",
+    "tags": [
+      "Banco de Dados",
+      "Low-Code",
+      "Javascript",
+      "Oracle",
+      "Free Tier"
+    ]
+  },
+  {
+    "nome": "DreamHost (Trial/Promo)",
+    "descricao": "Serviço de hospedagem web que oferece planos acessíveis e trials. Comumente utilizado para hospedar sites estáticos, blogs em PHP ou pequenas aplicações em Python.",
+    "data_criacao": "1997",
+    "link": "https://www.dreamhost.com",
+    "tags": [
+      "Hospedagem",
+      "PHP",
+      "Python",
+      "Web Hosting",
+      "MySQL"
+    ]
+  },
+  {
+    "nome": "OpenLiteSpeed (Self-Hosted)",
+    "descricao": "Servidor web open source com foco em performance. Ideal para self-hosting de sites em PHP/Laravel e pode ser facilmente instalado em VMs gratuitas (EC2, Azure) para deploys.",
+    "data_criacao": "2017",
+    "link": "https://www.litespeedtech.com/openlitespeed",
+    "tags": [
+      "Web Server",
+      "PHP",
+      "Laravel",
+      "Performance",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "nome": "Cloudways (Free Trial)",
+    "descricao": "Plataforma de hospedagem gerenciada que oferece um trial gratuito. Simplifica o deploy de aplicações PHP (Laravel) e Node.js em provedores de nuvem como AWS e DigitalOcean.",
+    "data_criacao": "2011",
+    "link": "https://www.cloudways.com",
+    "tags": [
+      "PaaS",
+      "PHP",
+      "Node.js",
+      "Managed Hosting",
+      "Trial"
+    ]
+  },
+  {
+    "nome": "CentOS Web Panel (CWP)",
+    "descricao": "Painel de controle de servidor web gratuito. Permite o gerenciamento e deploy de sites e aplicações em PHP e Python, configurando facilmente ambientes Apache/Nginx.",
+    "data_criacao": "2012",
+    "link": "https://control-webpanel.com",
+    "tags": [
+      "Painel de Controle",
+      "Linux",
+      "PHP",
+      "Python",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "nome": "Bitnami Community Catalogs",
+    "descricao": "Coleção de instaladores e templates para aplicações web, frequentemente usados em ambientes Kubernetes. Facilita o deploy de aplicações baseadas em Python, Java e Node.js.",
+    "data_criacao": "2006",
+    "link": "https://bitnami.com",
+    "tags": [
+      "Deployment Tool",
+      "Kubernetes",
+      "Docker",
+      "Node.js",
+      "Java"
+    ]
+  },
+  {
+    "nome": "Suborbital Compute",
+    "descricao": "Plataforma para computação serverless focada em segurança e velocidade, utilizando o runtime WebAssembly. Suporta workloads desenvolvidos em Rust e Go.",
+    "data_criacao": "2020",
+    "link": "https://suborbital.dev/compute",
+    "tags": [
+      "Rust",
+      "WebAssembly",
+      "Serverless",
+      "Go",
+      "Cloud Native"
+    ]
+  },
+  {
+    "nome": "Vagrant (Self-Hosted Dev Env)",
+    "descricao": "Ferramenta para criar e gerenciar ambientes de desenvolvimento virtuais. Simula o ambiente de produção (com Docker ou K8s) localmente, útil para testar deploys de Spring Boot e Angular.",
+    "data_criacao": "2010",
+    "link": "https://www.vagrantup.com",
+    "tags": [
+      "Virtualization",
+      "Local Development",
+      "Spring Boot",
+      "Angular",
+      "DevOps"
+    ]
+  },
+  {
+    "nome": "Tanzu Build Service",
+    "descricao": "Serviço que automatiza a criação de imagens Docker a partir do código fonte. Ajuda no deployment contínuo de aplicações Java, Python e Go para ambientes Kubernetes.",
+    "data_criacao": "2019",
+    "link": "https://tanzu.vmware.com/build-service",
+    "tags": [
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Java",
+      "Go"
+    ]
+  },
+  {
+    "nome": "Netdata (Self-Hosted)",
+    "descricao": "Sistema de monitoramento open source que é implantado em qualquer servidor Linux/VM. Embora seja monitoramento, requer um processo de deploy e é compatível com stacks como Node.js, PHP e Python.",
+    "data_criacao": "2016",
+    "link": "https://www.netdata.cloud",
+    "tags": [
+      "Monitoramento",
+      "Self-Hosted",
+      "Linux",
+      "Node.js",
+      "DevOps"
+    ]
+  },
+  {
+    "nome": "Tyk Gateway (Self-Hosted)",
+    "descricao": "Gateway API open source. Usado para gerenciar, proteger e implantar APIs construídas com qualquer stack, como C#, Go ou Python, frequentemente rodando em containers Docker.",
+    "data_criacao": "2014",
+    "link": "https://tyk.io",
+    "tags": [
+      "API Gateway",
+      "Docker",
+      "Go",
+      "C#",
+      "Open Source"
+    ]
+  },
+  {
+    "nome": "Gitpod (Free Tier)",
+    "descricao": "Ambiente de desenvolvimento pronto para código em nuvem. Permite iniciar ambientes de trabalho baseados em Docker e Kubernetes rapidamente, ideal para projetos em Java, Python ou Go.",
+    "data_criacao": "2019",
+    "link": "https://www.gitpod.io",
+    "tags": [
+      "IDE Online",
+      "Kubernetes",
+      "Docker",
+      "Go",
+      "Java"
+    ]
+  },
+  {
+    "nome": "Rocket.Chat (Self-Hosted)",
+    "descricao": "Plataforma de comunicação open source construída em Node.js (Meteor). O código é gratuito, exigindo self-hosting em VMs ou containers para o deploy.",
+    "data_criacao": "2015",
+    "link": "https://rocket.chat",
+    "tags": [
+      "Node.js",
+      "Self-Hosted",
+      "Open Source",
+      "Chat",
+      "Deployment"
+    ]
+  },
+  {
+    "nome": "Screeps (Private Server)",
+    "descricao": "Jogo de estratégia MMO programável em JavaScript. Embora seja um jogo, rodar um servidor privado é um excelente exercício de deploy e gerenciamento de aplicações Node.js em Docker.",
+    "data_criacao": "2014",
+    "link": "https://screeps.com",
+    "tags": [
+      "Node.js",
+      "Javascript",
+      "Docker",
+      "Game Server",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "nome": "Free Tier VPS Providers (Random)",
+    "descricao": "Refere-se a provedores menores de VPS que oferecem recursos limitados gratuitamente, usados para hospedar aplicações simples em PHP, Python ou Ruby on Rails.",
+    "data_criacao": "2000",
+    "link": "https://example.com/freevps",
+    "tags": [
+      "VPS",
+      "Hospedagem",
+      "PHP",
+      "Python",
+      "Ruby on Rails"
+    ]
+  }
+]
