@@ -1,240 +1,475 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte Quicksand do Google Fonts */
+/* --- style.css Refatorado --- */
+
+/* Importa a fonte Quicksand do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* --- Reset e Variáveis de Tema Escuro (Dark Mode) --- */
 
 * {
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root {
-    --primary-color: #8ab4f8; /* Cor primária (azul claro) */
-    --secondary-color: #e8eaed; /* Cor secundária (cinza claro) */
-    --tertiary-color: #9aa0a6; /* Cor terciária (cinza médio) */
-    --bg-color: #202124; /* Cor de fundo (cinza escuro) */
+    /* Cores ajustadas para um Dark Mode mais elegante e moderno */
+    --primary-color: #5d9cec;      /* Azul vibrante para links/foco/ações primárias */
+    --secondary-color: #f1f3f4;    /* Texto principal (Branco suave) */
+    --tertiary-color: #9aa0a6;     /* Texto secundário/borda suave (Cinza médio) */
+    --bg-color: #202124;           /* Fundo principal (Cinza escuro) */
+    --surface-color: #2c2f33;      /* Fundo de elementos (Cards/Superfícies) */
+    --accent-color: #fbbc04;       /* Cor de destaque (Amarelo) */
+    --border-radius-large: 1.5rem; /* Novo! */
+    --border-radius-small: 0.75rem; /* Novo! */
 }
 
 body {
-    margin: 0; /* Remove a margem padrão do body */
-    background: var(--bg-color); /* Define a cor de fundo usando uma variável */
-    color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
-    font-family: "Quicksand", sans-serif; /* Define a família da fonte */
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--secondary-color);
+    font-family: "Quicksand", sans-serif;
+    /* Configura o body como um container flex para empurrar o footer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* --- Cabeçalho e Busca (Header e Input/Button) --- */
+
 header {
-    padding: 2rem 1rem; /* Espaçamento interno (2rem em cima/baixo, 1rem nos lados) */
-    display: flex; /* Habilita o layout flexbox */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-around; /* Distribui os itens com espaço ao redor */
-    position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar a página */
-    top: 0; /* Posição do topo quando sticky */
-    background: var(--bg-color); /* Cor de fundo do cabeçalho */
-    z-index: 10; /* Define a ordem de empilhamento para ficar sobre outros elementos */
-    border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior */
-    gap: 1rem; /* Espaçamento entre os elementos flex */
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--surface-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    gap: 1rem;
 }
 
 header h1 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    margin: 0; /* Remove a margem padrão */
-    font-weight: 500; /* Peso da fonte (médio) */
-    white-space: nowrap; /* Impede a quebra de linha do texto */
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--primary-color);
 }
 
-div input {
-    padding: 0.375rem 0.75rem; /* Espaçamento interno */
-    border-radius: 1rem; /* Arredonda as bordas */
-    border: 1px solid var(--tertiary-color); /* Define a borda */
-    background: var(--bg-color); /* Cor de fundo */
-    font-family: inherit; /* Herda a família da fonte do elemento pai */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades */
-    width: 30rem; /* Largura do input */
-    color: var(--secondary-color); /* Cor do texto digitado */
-    margin-right: .5rem; /* Margem à direita */
+/* Container de Input e Botão */
+div.search-container { /* Adicionado a classe para usar o seletor mais específico */
+    display: flex;
+    align-items: stretch; 
+    flex-grow: 1; 
+    max-width: 50rem; 
+    transition: transform 0.3s ease; 
 }
 
-div input::placeholder {
-    font-size: 1.2rem; /* Tamanho da fonte do placeholder */
-    font-weight: 300; /* Peso da fonte do placeholder */
-    color: var(--tertiary-color); /* Cor do texto do placeholder */
+/* O HTML usa a tag <div> para o container de busca, mas vou aplicar o estilo */
+header > div { 
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+    max-width: 50rem;
+    gap: 0.75rem; /* Usa gap em vez de margin-right no input */
 }
 
-div input:focus {
-    outline: none; /* Remove a borda de foco padrão */
-    border-color: var(--bg-color); /* Muda a cor da borda ao focar */
-    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona uma sombra de caixa para indicar foco */
+header > div input[type="text"] {
+    flex-grow: 1; 
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--border-radius-large); 
+    border: 2px solid var(--tertiary-color);
+    background: var(--bg-color); 
+    font-family: inherit;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    color: var(--secondary-color);
+    /* margin-right removido, usando gap no pai */
+}
+
+header > div input[type="text"]::placeholder {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--tertiary-color);
+    opacity: 0.8;
+}
+
+header > div input[type="text"]:focus {
+    outline: none; 
+    border-color: var(--primary-color); 
+    box-shadow: 0 0 0 3px rgba(93, 156, 236, 0.4),
+                0 0 8px rgba(93, 156, 236, 0.2);
+    background-color: var(--bg-color);
 }
 
 #botao-busca {
-    padding: 1rem 2rem; /* Espaçamento interno */
-    border-radius: 1rem; /* Arredonda as bordas */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
-    font-family: inherit; /* Herda a família da fonte */
-    font-weight: 500; /* Peso da fonte */
-    font-size: 1rem; /* Tamanho da fonte */
-    white-space: nowrap; /* Impede a quebra de linha do texto */
-    transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave para cor de fundo e cor do texto */
-    background-color: var(--bg-color); /* Cor de fundo */
-    color: var(--secondary-color); /* Cor do texto */
-    border: 1px solid var(--bg-color); /* Adiciona uma borda */
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-large);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    
+    /* Estilo 'Filled' */
+    background-color: var(--primary-color); 
+    color: var(--bg-color); 
 }
 
 #botao-busca:hover {
-    background-color: var(--primary-color); /* Muda a cor de fundo ao passar o mouse */
-    color: var(--bg-color); /* Muda a cor do texto ao passar o mouse */
-    box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adiciona uma sombra de caixa */
+    background-color: #4b82d3; /* Tom ligeiramente escuro do primário */
+    color: var(--bg-color); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
 }
 
 #botao-busca:active {
-    transform: scale(0.98); /* Efeito de clique (diminui o tamanho) */
+    transform: scale(0.97); 
+    opacity: 0.9;
 }
+
+/* --- Conteúdo Principal (Grid e Cards) --- */
 
 main {
-    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
-    max-width: 80rem; /* Largura máxima do conteúdo principal */
-    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
-    margin-top: 2rem; /* Margem no topo */
-    height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela */
+    flex-grow: 1; 
+    padding: 2rem 1.5rem;
+    max-width: 85rem;
+    margin: 0 auto;
 }
 
-article {
-    background: none; /* Sem cor de fundo */
-    border-radius: 0; /* Sem bordas arredondadas */
-    padding: 0; /* Remove o padding */
-    padding: 0 1rem; /* Espaçamento interno nos lados */
-    margin-bottom: 1.25rem; /* Margem inferior */
-    box-shadow: none; /* Sem sombra */
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transição suave */
-    border-bottom: 1px solid var(--bg-color); /* Borda inferior */
-    padding-bottom: 1.5rem; /* Espaçamento interno inferior */
+.card-container {
+    /* Layout Grid para exibir os cards */
+    display: grid;
+    gap: 2rem; /* Espaçamento entre os cards */
+    padding: 0;
+    
+    /* Configuração responsiva do grid: Mínimo de 300px por coluna */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none; /* Se a tag fosse ul, removeria o bullet */
 }
 
-article:hover {
-    transform: scale(1.01); /* Aumenta ligeiramente o tamanho ao passar o mouse */
-    cursor: pointer; /* Muda o cursor para uma mão */
+.card { /* O article tem a classe 'card' */
+    background: var(--surface-color);
+    border-radius: var(--border-radius-small);
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--primary-color); /* Linha de destaque moderna */
+    
+    /* Transição suave para o efeito hover/foco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-article h2 {
-    margin-top: 0; /* Remove a margem superior */
-    font-weight: 600; /* Peso da fonte */
-    font-size: 1.6rem; /* Tamanho da fonte */
-    border-bottom: none; /* Sem borda inferior */
-    padding-bottom: 0; /* Sem espaçamento interno inferior */
-    margin-bottom: 0.25rem; /* Margem inferior */
-    color: var(--primary-color); /* Cor do texto */
+/* Efeito de elevação sutil no hover */
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border-left-color: var(--accent-color); /* Altera a cor da linha de destaque no hover */
 }
 
-article p {
-    margin: 0.5rem 0; /* Margem superior e inferior */
-    line-height: 1.6; /* Altura da linha para melhor legibilidade */
-    font-size: 1rem; /* Tamanho da fonte */
-    margin-bottom: 0.5rem; /* Margem inferior */
-    color: var(--secondary-color); /* Cor do texto */
+.card h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.5rem; /* Levemente menor para caber melhor no card */
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color); /* Título na cor branca suave */
 }
 
-article p strong {
-    color: var(--tertiary-color); /* Cor do texto em negrito */
-    font-weight: 400; /* Peso da fonte */
+.card p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--tertiary-color); /* Texto principal mais suave */
 }
 
-article a {
-    color: var(--primary-color); /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    font-weight: 200; /* Peso da fonte */
+.card p strong {
+    color: var(--secondary-color);
+    font-weight: 500;
 }
 
-article a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+.card a {
+    display: inline-block; /* Garante que o link possa ter margin/padding */
+    margin-top: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
+
+.card a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transform: translateX(3px); /* Efeito de deslize sutil no link */
+}
+
+/* --- Rodapé (Footer) --- */
 
 .footer {
-    position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
-    bottom: 0; /* Alinha na parte inferior */
-    left: 0; /* Alinha à esquerda */
-    width: 100%; /* Largura total */
-    color: var(--tertiary-color); /* Cor do texto */
-    background-color: var(--bg-color); /* Cor de fundo */
-    padding: 15px 20px; /* Espaçamento interno */
-    border-top: 1px solid #3c4043; /* Borda superior */
-    font-size: 0.8rem; /* Tamanho da fonte */
-}
-
-.footer-location {
-    color: #9aa0a6; /* Cor do texto */
-    margin-bottom: 10px; /* Margem inferior */
+    margin-top: auto; /* Empurra o rodapé para baixo */
+    width: 100%;
+    color: var(--tertiary-color);
+    background-color: var(--surface-color);
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #3c4043;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .footer-links {
-    list-style: none; /* Remove os marcadores da lista */
-    display: flex; /* Habilita o layout flexbox */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 15px; /* Espaçamento entre os links */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-links a {
-    color: var(--secondary-color); /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: color 0.2s; /* Transição suave para a cor */
+    color: var(--tertiary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 400;
 }
 
 .footer-links a:hover {
-    color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variável não definida) */
+    color: var(--primary-color);
+}
+
+/* --- Responsividade (Media Queries) --- */
+
+@media (max-width: 1024px) {
+    /* Ajustes para tablets e telas médias */
+    .card-container {
+        /* Permite 2 colunas mais cedo */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
-    header { /* Estilos para telas com largura máxima de 768px */
-        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
-        padding: 1rem; /* Reduz o espaçamento interno */
+    /* Ajustes para a maioria dos tablets e celulares grandes */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
     }
 
-    header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
-        text-align: center; /* Centraliza o texto */
-        margin-bottom: 1rem; /* Adiciona margem inferior */
+    header h1 {
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
     }
 
-    div input { /* Estilos para o input em telas menores */
-        width: 90vw; /* Largura baseada na largura da viewport */
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    header > div {
+        width: 100%;
+        flex-direction: column; /* Coloca input e botão em coluna */
+        max-width: none;
+        gap: 0.75rem;
     }
 
-    main { /* Estilos para o main em telas menores */
-        padding: 0 1rem; /* Adiciona espaçamento lateral */
+    header > div input[type="text"] {
+        width: 100%;
+        margin-bottom: 0; 
+        font-size: 1rem;
+        padding: 0.65rem 1rem;
     }
 
-    article:hover { /* Estilos para o article em telas menores */
-        transform: none; /* Remove o efeito de escala ao passar o mouse */
+    #botao-busca {
+        width: 100%;
+        padding: 0.65rem 1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .card-container {
+        /* Em telas pequenas, apenas 1 coluna com espaçamento reduzido */
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card:hover {
+        /* Remove o transform no hover em telas pequenas */
+        transform: none; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 }
 
 @media (max-width: 480px) {
-    header h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
-        max-width: 70%; /* Define uma largura máxima */
-        word-wrap: break-word; /* Permite a quebra de palavras longas */
+    /* Ajustes para celulares pequenos */
+    header h1 {
+        font-size: 1.4rem;
     }
 
-    div input, /* Estilos para o input e seu placeholder em telas muito pequenas */
-    div input::placeholder {
-        font-size: 1rem; /* Reduz o tamanho da fonte */
+    .card h2 {
+        font-size: 1.3rem;
     }
 
-    article h2 { /* Estilos para o h2 do article em telas muito pequenas */
-        font-size: 1.3rem; /* Reduz o tamanho da fonte */
+    .card p {
+        font-size: 0.95rem;
     }
 
-    div { /* Estilos para a div do cabeçalho em telas muito pequenas */
-        display: flex; /* Habilita flexbox */
-        align-items: center; /* Alinha itens ao centro */
-        justify-content: center; /* Centraliza itens */
-        flex-direction: column; /* Organiza em coluna */
-        gap: 0.5rem; /* Espaçamento entre os itens */
+    .footer {
+        padding: 1rem;
     }
+}
+/* --- Estilos da Notificação (Adicione ao seu style.css) --- */
 
-    .footer { /* Estilos para o rodapé em telas muito pequenas */
-        display: none; /* Oculta o rodapé */
-    }
+/* 1. Container - Posição Fixa na tela */
+.notification-container {
+    position: fixed;
+    bottom: 60px; /* Alinha na parte inferior */
+    right: 20px;  /* Alinha na parte direita */
+    z-index: 1000;
+    /* Inicialmente invisível e fora da tela */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    pointer-events: none; /* Permite clicar através do container quando invisível */
+}
 
-    button { /* Estilos para o botão em telas muito pequenas */
-        margin-top: 1rem; /* Adiciona margem no topo */
-    }
+/* 2. Estilo do Balão (Toast) */
+.notification-toast {
+    display: flex;
+    align-items: center;
+    background-color: #333333; /* Fundo escuro sutil */
+    color: var(--secondary-color); /* Texto branco suave */
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius-small); /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra elegante */
+    min-width: 250px;
+    border-left: 5px solid var(--primary-color); /* Linha de destaque azul */
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.notification-message {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+/* Botão de Fechar */
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--tertiary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 0 0.5rem;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: var(--secondary-color);
+}
+
+/* 3. Classes de Controle JS (Entrada/Saída) */
+.notification-container.show {
+    opacity: 1;
+    transform: translateY(0); /* Desliza para dentro da tela */
+    pointer-events: auto; /* Permite interação (clicar no botão de fechar) */
+}
+
+.notification-container.hide {
+    opacity: 0;
+    transform: translateY(100%); /* Desliza para fora da tela */
+}
+
+/* Estilo para o botão de demonstração (Opcional) */
+#show-notification {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+#show-notification:hover {
+    background-color: #4b82d3;
+}
+
+/* --- Estilos para Tags/Rótulos --- */
+
+/* 1. Estilo Base da Tag */
+.tag {
+    /* Layout */
+    display: inline-flex; /* Permite alinhamento e padding internos */
+    align-items: center;
+    padding: 0.3rem 0.75rem; /* Espaçamento interno vertical e horizontal */
+    margin: 0.2rem; /* Espaçamento entre tags */
+    
+    /* Estética */
+    border-radius: 50px; /* Bordas bem arredondadas (pílula) */
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap; /* Impede quebras de linha */
+    text-transform: capitalize; /* Deixa a primeira letra maiúscula (opcional) */
+    
+    /* Transição */
+    transition: all 0.2s ease;
+    cursor: default; /* Indica que não são clicáveis por padrão */
+}
+
+/* 2. Cores Padrão (Neutro, baseado na cor terciária) */
+.tag-default {
+    background-color: rgba(154, 160, 166, 0.1); /* Fundo muito sutil da cor terciária */
+    color: var(--tertiary-color);
+    border: 1px solid rgba(154, 160, 166, 0.3); /* Borda fina e suave */
+}
+
+.tag-default:hover {
+    background-color: rgba(154, 160, 166, 0.2);
+}
+
+/* 3. Variação: Primária (Para destacar a tag principal, como Linguagem Principal) */
+.tag-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color); /* Texto escuro contra o azul */
+    border: 1px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.tag-primary:hover {
+    box-shadow: 0 2px 8px rgba(93, 156, 236, 0.3);
+}
+
+/* 4. Variação: Secundária (Para tags relacionadas ou secundárias) */
+.tag-secondary {
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color); /* Usa a borda primária para um estilo 'ghost' */
+}
+
+.tag-secondary:hover {
+    background-color: rgba(93, 156, 236, 0.1); /* Fundo suave no hover */
+}
+
+/* 5. Variação: Link/Clicável (Para tags que funcionam como filtros) */
+.tag.tag-link {
+    cursor: pointer;
+}
+
+.tag.tag-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Uso em Lista de Tags (Exemplo de container) --- */
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as tags quebrem para a próxima linha */
+    padding: 0;
+    list-style: none;
+    margin: 0.5rem 0;
 }

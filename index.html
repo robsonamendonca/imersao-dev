@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Base de conhecimento</title>
+    <title>Base de Conhecimento - Deploy</title>
 </head>
+
 <body>
     <header>
-        <h1>Base de conhecimento</h1>
+        <h1>Base de Conhecimento - Deploy</h1>
         <div>
-            <input type="text" placeholder="Digite uma linguagem de programação">
+            <input type="text" placeholder="Digite sua stack: Ex: JavaScript, Python, etc." id="campo-busca">
             <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
         </div>
     </header>
@@ -19,6 +21,11 @@
         <section class="card-container">
             <!-- <article class="card">
                 <h2>JavaScript</h2>
+                <div class="tag-list">
+                    <span class="tag tag-primary">PaaS</span>
+                    <span class="tag tag-default">deploy</span>
+                    <span class="tag tag-default">nuvem</span>
+                </div>
                 <p>1995</p>
                 <p>JavaScript é uma linguagem de programação</p>
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Saiba mais</a>
@@ -26,17 +33,38 @@
         </section>
     </main>
 
+    <div id="notification-container" class="notification-container">
+        <div id="notification-toast" class="notification-toast">
+            <span class="notification-icon">⛔</span>
+            <span class="notification-message">Termo não encontrado: tente novamente!</span>
+            <button class="close-btn" onclick="hideNotification()">×</button>
+        </div>
+    </div>
+
     <footer>
-    <footer class="footer">
-        <ul class="footer-links">
-            <li>
-                <a href="https://github.com/guilhermeonrails">GitHub</a>
-            </li>
-            <li>
-                <a href="https://www.alura.com.br/">Alura</a>
-            </li>
-        </ul>
-    </footer>
-    <script src="script.js"></script>
+        <footer class="footer">
+            <ul class="footer-links ">
+                <li>
+                    <a href="https://github.com/robsonamendonca">GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/robsonamendonca/">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://www.alura.com.br/">Alura</a>
+                </li>
+                <li>
+                    <small>Projeto desenvolvido por Robson Mendonça |
+                        <span>⭐</span>
+                        <span id="stars-count">0</span>
+                    </small>
+
+                </li>                
+            </ul>
+
+        </footer>
+        <script src="script.js"></script>
 </body>
+
 </html>
